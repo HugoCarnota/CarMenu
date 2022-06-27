@@ -1,4 +1,7 @@
 local disableShuffle = true
+
+Citizen.CreateThread(function() while ESX == nil do TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end) Citizen.Wait(10) end end)
+
 function disablec_conducir(flag)
 	disableShuffle = flag
 end
